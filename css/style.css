@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+  --bg-clr: hsl(0, 0%, 0%);
+  --primary-clr: hsl(273, 91%, 55%);
+  --boxes-clr-100: hsla(240, 4%, 16%, 40%);
+  --boxes-clr-200: hsla(240, 4%, 16%, 70%);
+  --box-border-clr: hsla(0, 0%, 100%, 10.2%);
+  --border-clr: #2a2a2a;
+  --tx-100: #a1a1aa;
+
+  /* Sizes */
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-24: 1.5rem;
+  /* Weights */
+  --fw-semi: 600;
+  --fw-reg: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Geist", sans-serif;
+  background-color: var(--bg-clr);
+  color: var(--white);
+  line-height: 2;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  border-radius: 50%;
+  background-color: hsla(11, 56%, 49%, 14%);
+  box-shadow: 0 0 450px 450px hsla(11, 56%, 49%, 15%);
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -100px;
+  border-radius: 50%;
+  background-color: hsla(273, 72%, 65%, 14%);
+  box-shadow: 0 0 450px 450px hsla(273, 72%, 65%, 15%);
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+button:focus-visible {
+  outline: transparent;
+  box-shadow: 0 0 10px hsl(273, 91%, 55%);
+}
+
+header {
+  position: relative;
+}
+.title {
+  font-size: var(--fs-18);
+  font-weight: var(--fw-semi);
+  padding-block: 22px;
+  margin-inline: auto;
+  text-align: center;
+  border-block-end: 1px solid var(--border-clr);
+}
+
+/* Main */
+main {
+  position: relative;
+  max-width: 950px;
+  margin-block: 60px;
+  margin-inline: auto;
+  padding-inline: 60px;
+}
+
+.prog-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prog-info .question-num {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-reg);
+  color: var(--tx-100);
+}
+.prog-info .completed {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-reg);
+  color: var(--white);
+}
+
+.prog-bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  margin-block-start: 5px;
+  background-color: var(--boxes-clr-200);
+  border-radius: 100vw;
+}
+.prog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 100vw;
+  background-color: var(--primary-clr);
+}
+
+.questions-info {
+  margin-block: var(--fs-24);
+  padding: var(--fs-24);
+  border: 1px solid var(--box-border-clr);
+  border-radius: 10px;
+  background-color: var(--boxes-clr-100);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: var(--fs-24);
+  flex-wrap: wrap;
+}
+
+.info .points {
+  font-size: var(--fs-12);
+  font-weight: var(--fw-reg);
+  padding: 1px 13px;
+  border-radius: 100vw;
+  background-color: var(--primary-clr);
+}
+
+.info .timer {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-semi);
+  color: var(--white);
+}
+.info .timer.finishes {
+  color: #ef4444;
+}
+
+.info .level {
+  padding: 1px 20px;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-reg);
+  border-radius: 100vw;
+  text-transform: capitalize;
+  background-color: var(--boxes-clr-200);
+}
+
+.quest {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-semi);
+  line-height: 1.5;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: var(--fs-16);
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--boxes-clr-100);
+  border: 1px solid var(--box-border-clr);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: var(--fs-16);
+  font-weight: bold;
+  color: white;
+  transition: filter 0.15s, background-color 0.15s;
+}
+.answer.right {
+  background-color: hsl(123, 91%, 40%);
+}
+.answer.wrong {
+  background-color: hsl(0, 84%, 60%);
+}
+.answer.pressed {
+  background-color: hsl(278, 84%, 50%, 50%);
+}
+.answer:hover {
+  filter: brightness(1.25);
+}
+.answer .quest-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-inline-end: 12px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--boxes-clr-200);
+  font-size: var(--fs-12);
+  text-transform: uppercase;
+  transition: background-color 0.15s;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: var(--fs-24);
+}
+.navigation .check,
+.navigation .next {
+  border-radius: 10px;
+  padding-inline: var(--fs-16);
+  cursor: pointer;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-semi);
+  transition: filter 0.15s;
+}
+.navigation .check {
+  color: var(--tx-100);
+  background-color: transparent;
+  border: 1px solid var(--box-border-clr);
+  padding-block: 6px;
+}
+
+.navigation .next {
+  background-color: var(--primary-clr);
+  color: white;
+  border: none;
+  padding-block: 9px;
+}
+
+.navigation .check:hover,
+.navigation .next:hover {
+  filter: brightness(0.7);
+}
+
+@media (max-width: 650px) {
+  .quest {
+    font-size: 20px;
+  }
+  main {
+    max-width: 950px;
+    margin-block: 30px;
+    padding-inline: 30px;
+  }
+  .info .timer {
+    font-size: var(--fs-16);
+    font-weight: var(--fw-semi);
+    color: #ef4444;
+    width: 100%;
+    text-align: center;
+    order: -1;
+    margin-block: -10px 10px;
+  }
+  .answers {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.show-score {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.show-score::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.904);
+  z-index: -1;
+}
+.show-score span {
+  background-color: #2a2a2ae1;
+  border: 1px solid var(--box-border-clr);
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 20px;
+  min-width: 300px;
+}
+
+main {
+  display: block;
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Which of the following energy sources cannot be replenished naturally on a human timescale, making it an example of a non-renewable resource?",
+    "answer_1": "Solar Power",
+    "answer_2": "Wind Power",
+    "answer_3": "Natural Gas",
+    "answer_4": "Hydroelectric Power",
+    "right_answer": "Natural Gas",
+    "difficulty": "Medium",
+    "points": 100,
+    "timeLimit": 10
+  },
+  {
+    "title": "Which planet in our solar system is known for having the most moons?",
+    "answer_1": "Earth",
+    "answer_2": "Jupiter",
+    "answer_3": "Saturn",
+    "answer_4": "Neptune",
+    "right_answer": "Saturn",
+    "difficulty": "Easy",
+    "points": 100,
+    "timeLimit": 10
+  },
+  {
+    "title": "Which programming language is primarily used for styling web pages?",
+    "answer_1": "HTML",
+    "answer_2": "CSS",
+    "answer_3": "JavaScript",
+    "answer_4": "Python",
+    "right_answer": "CSS",
+    "difficulty": "Hard",
+    "points": 200,
+    "timeLimit": 5
+  },
+  {
+    "title": "Who painted the Mona Lisa?",
+    "answer_1": "Leonardo da Vinci",
+    "answer_2": "Vincent van Gogh",
+    "answer_3": "Pablo Picasso",
+    "answer_4": "Claude Monet",
+    "right_answer": "Leonardo da Vinci",
+    "difficulty": "Easy",
+    "points": 50,
+    "timeLimit": 5
+  },
+  {
+    "title": "Which gas do humans primarily exhale?",
+    "answer_1": "Oxygen",
+    "answer_2": "Carbon Dioxide",
+    "answer_3": "Nitrogen",
+    "answer_4": "Helium",
+    "right_answer": "Carbon Dioxide",
+    "difficulty": "Medium",
+    "points": 100,
+    "timeLimit": 10
+  },
+  {
+    "title": "What is the capital city of Japan?",
+    "answer_1": "Beijing",
+    "answer_2": "Seoul",
+    "answer_3": "Tokyo",
+    "answer_4": "Kyoto",
+    "right_answer": "Tokyo",
+    "difficulty": "Easy",
+    "points": 50,
+    "timeLimit": 5
+  }
+]
